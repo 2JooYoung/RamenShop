@@ -1,0 +1,137 @@
+﻿<html>
+<head>
+    <title>쇼핑 카트</title>
+    <style>
+        body {
+            height: 100%;
+            background-color: #F3F1E9;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        caption {
+                color: red;
+                text-decoration: underline;
+        }
+    </style>
+
+    
+</head>
+<body>
+    <h1><img src="images/라면.png" width="70" height="50" /><a href="index.html">라면 장바구니</a></h1>
+
+
+
+    <form action="">
+        <table border="1">
+            <tr>
+                <th> 품목 </td>
+                <th> 가격 </th> 
+                <th> 수량 </th> 
+                <th> 합계 </th> 
+            </tr>
+            <tr>
+                <td> 신라면</td>
+                <td> 700원 </td>
+                <td> <input id="ramen1" type="number" size="2" min="0" step="1" value="0"/> </td>
+                <td> <input id="ramen1Total" type="text" size="6" value="0"/>원</td>
+            </tr>
+            <tr>
+                <td> 안성탕면 </td> 
+                <td> 500원 </td>
+                <td> <input id="ramen2" type="number" size="2" min="0" step="1" value="0"/> </td>
+                <td> <input id="ramen2Total" type="text" size="6" value="0"/>원</td>
+            </tr>
+            <tr>
+                <td> 진라면 </td> 
+                <td> 700원 </td>
+                <td> <input id="ramen3" type="number" size="2" min="0" step="1" value="0"/> </td>
+                <td> <input id="ramen3Total" type="text" size="6" value="0"/>원</td>
+            </tr>
+            <tr>
+                <td> 참깨라면 </td> 
+                <td> 800원 </td>
+                <td> <input id="ramen4" type="number" size="2" min="0" step="1" value="0"/> </td>
+                <td> <input id="ramen4Total" type="text" size="6" value="0"/>원</td>
+            </tr>
+            <tr>
+                <td> 삼양라면 </td> 
+                <td> 600원 </td>
+                <td> <input id="ramen5" type="number" size="2" min="0" step="1" value="0"/> </td>
+                <td> <input id="ramen5Total" type="text" size="6" value="0"/>원</td>
+            </tr>
+            <tr>
+                <td> 불닭볶음면 </td> 
+                <td> 800원 </td>
+                <td> <input id="ramen6" type="number" size="2" min="0" step="1" value="0"/> </td>
+                <td> <input id="ramen6Total" type="text" size="6" value="0"/>원</td>
+            </tr>
+            <tr>
+                <td> 포테토칩 육개장 사발면맛 </td> 
+                <td> 900원 </td>
+                <td> <input id="ramen7" type="number" size="2" min="0" step="1" value="0"/> </td>
+                <td> <input id="ramen7Total" type="text" size="6" value="0"/>원</td>
+            </tr>
+            <tr>
+                <td> 참깨 라면 타임 </td> 
+                <td> 1000원 </td>
+                <td> <input id="ramen8" type="number" size="2" min="0" step="1" value="0"/> </td>
+                <td> <input id="ramen8Total" type="text" size="6" value="0"/>원</td>
+            </tr>
+            <tr>
+                <td> 합계 </td> <td> &nbsp; </td>
+                <td> <input id="totalNumber" type="text" size="10" value="0"/> </td>
+                <td> <input id="totalPrice" type="text" size="6" value="0"/>원</td>
+            </tr>
+        </table> <br />
+        <input type="button" value="합계계산" onclick="updateAll()"/>
+        <input type="reset" value="초기화"/>
+    </form>
+    <script>
+        function updateAll(){
+
+            var n1 = document.getElementById("ramen1").value;
+            var n2 = document.getElementById("ramen2").value;
+            var n3 = document.getElementById("ramen3").value;
+            var n4 = document.getElementById("ramen4").value;
+            var n5 = document.getElementById("ramen5").value;
+            var n6 = document.getElementById("ramen6").value;
+            var n7 = document.getElementById("ramen7").value;
+            var n8 = document.getElementById("ramen8").value;
+
+            var p1 = 700 * parseInt(n1);
+            var p2 = 500 * parseInt(n2);
+            var p3 = 700 * parseInt(n3);
+            var p4 = 800 * parseInt(n4);
+            var p5 = 600 * parseInt(n5);
+            var p6 = 800 * parseInt(n6);
+            var p7 = 900 * parseInt(n7);
+            var p8 = 1000 * parseInt(n8);
+
+            // 합계값
+            document.getElementById("ramen1Total").value = p1;
+            document.getElementById("ramen2Total").value = p2;
+            document.getElementById("ramen3Total").value = p3;
+            document.getElementById("ramen4Total").value = p4;
+            document.getElementById("ramen5Total").value = p5;
+            document.getElementById("ramen6Total").value = p6;
+            document.getElementById("ramen7Total").value = p7;
+            document.getElementById("ramen8Total").value = p8;
+
+            // 수량
+            var totalNumber = parseInt(n1) + parseInt(n2) + parseInt(n3) + parseInt(n4) + parseInt(n5) + parseInt(n6) + parseInt(n7) + parseInt(n8);
+            document.getElementById("totalNumber").value = totalNumber;
+
+            // 총 가격
+            var totalPrice = p1 + p2 + p3 + p4 + p5 + p6 +p7 + p8;
+            document.getElementById("totalPrice").value = totalPrice;
+        }
+    </script>
+    
+    <a href="index.html">Back to Home</a>
+</body>
+</html>
