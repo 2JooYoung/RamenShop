@@ -27,6 +27,6 @@ RamenShop은 라면 상품을 소개하고 판매하는 콘셉트의 웹페이�
 ##  Tech Stack
 
 - HTML5
-- CSS3*
+- CSS3
 -  JavaScript
 
