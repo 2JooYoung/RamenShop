@@ -1,8 +1,6 @@
 
 ## Ramen Shop
 
-> GitHub Pages 로 배포된 실제 페이지입니다.
-
 - **v1 – 첫 번째 버전**  
   레이아웃과 기본 기능을 구현한 초기 버전  
   https://2jooyoung.github.io/RamenShop/RamenShop_v.1/
